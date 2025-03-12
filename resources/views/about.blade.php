@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>About Page</title>
-
-    </head>
-    <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>        
-        <h1>This is the About Page.</h1>
-    </body>
-</html>
+<!-- invoke the layout meta-page -->
+<x-layout>
+    <!-- the following is put into $slot for this page due to the layout invocation -->
+    <h1>This is the About Page.</h1>
+</x-layout>

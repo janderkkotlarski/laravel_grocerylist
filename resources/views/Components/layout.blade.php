@@ -8,11 +8,16 @@
 
     </head>
     <body>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-        </nav>
-        <h1>This is the Home Page.</h1>
-    </body>
+				<x-nav-link>
+				</x-nav-link>        
+				
+				<!-- $slot is a blade meta-contextualized php variable for laravel to slot in page specific code -->
+				<?php
+						/* <?php echo $slot ?> */
+				?>
+
+				<!-- The following blade meta-code is equivalent to the previous comment php code -->
+				{{ $slot }}
+
+		</body>
 </html>
