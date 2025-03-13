@@ -1,7 +1,4 @@
-<nav>
-	<a href="/">Home</a>
-	<a href="/about">About</a>
-	<a href="/contact">Contact</a>
-</nav>
+<!-- Just a simple link with blade meta-coding -->
+<a {{ $attributes }}>{{ $slot }}</a>
 
-{{ $slot }}
+
