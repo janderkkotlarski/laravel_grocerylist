@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Models\Celery;
 
 Route::get('/', function () {
     return view('home');
@@ -9,50 +9,15 @@ Route::get('/', function () {
 
 Route::get('/celeries', function () {
     return view('celeries', [
-        'celeries' => [
-            [
-                'id' => 1,
-                'title' => 'Clown',
-                'opinion' => '50 turns'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Jester',
-                'opinion' => 'eaten'
-            ],
-            [
-                'id' => 3,
-                'title' => 'Trickster',
-                'opinion' => 'imagine'
-            ]
-        ]
+        'celeries' => Celery::all()
     ]);
 });
 
 Route::get('/celeries/{id}', function ($id) {
-    $celeries = [
-        [
-            'id' => 1,
-            'title' => 'Clown',
-            'opinion' => '50 turns'
-        ],
-        [
-            'id' => 2,
-            'title' => 'Jester',
-            'opinion' => 'eaten'
-        ],
-        [
-            'id' => 3,
-            'title' => 'Trickster',
-            'opinion' => 'imagine'
-        ]
-    ];
+    // Find the appropriate entry
+    $celery = Celery::find($id);
 
-
-    $celery = Arr::first($celeries, fn($celery) => $celery['id'] == $id);
-
-    // dd($celery);
-
+    // Keep the name the same
     return view('celery', ['celery' => $celery]);
 });
 
