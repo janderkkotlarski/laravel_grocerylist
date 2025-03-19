@@ -2,14 +2,14 @@
 <x-layout>
     <!-- blade meta-linking -->
     <x-slot:heading>
-        Job Opinions
+        Celery Opinions
     </x-slot:heading>
     <!-- Blade foreach loop -->
      <ul>
-        @foreach ($jobs as $job)
+        @foreach ($celeries as $celery)
             <li>
-                <a href="/jobs/">
-                    <strong>{{ $job['title'] }}</strong>'s celery opinions: {{ $job['celery'] }}
+                <a href="/celeries/{{ $celery['id'] }}" class="text-blue-500 hover:underline">
+                    <strong>{{ $celery['title'] }}</strong>'s celery opinions: {{ $celery['opinion'] }}
                 </a>
             </li>
         @endforeach

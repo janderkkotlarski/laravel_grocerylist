@@ -7,52 +7,53 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/jobs', function () {
-    return view('jobs', [
-        'jobs' => [
+Route::get('/celeries', function () {
+    return view('celeries', [
+        'celeries' => [
             [
                 'id' => 1,
                 'title' => 'Clown',
-                'celery' => '50 turns'
+                'opinion' => '50 turns'
             ],
             [
                 'id' => 2,
                 'title' => 'Jester',
-                'celery' => 'eaten'
+                'opinion' => 'eaten'
             ],
             [
                 'id' => 3,
                 'title' => 'Trickster',
-                'celery' => 'imagine'
+                'opinion' => 'imagine'
             ]
         ]
     ]);
 });
 
-Route::get('/jobs/{id}', function ($id) {
-    $jobs = [
+Route::get('/celeries/{id}', function ($id) {
+    $celeries = [
         [
             'id' => 1,
             'title' => 'Clown',
-            'celery' => '50 turns'
+            'opinion' => '50 turns'
         ],
         [
             'id' => 2,
             'title' => 'Jester',
-            'celery' => 'eaten'
+            'opinion' => 'eaten'
         ],
         [
             'id' => 3,
             'title' => 'Trickster',
-            'celery' => 'imagine'
+            'opinion' => 'imagine'
         ]
     ];
 
-    $job = Arr::first($jobs, fn($job) => $job['id'] == $id);
 
-    dd($job);
+    $celery = Arr::first($celeries, fn($celery) => $celery['id'] == $id);
 
-    return view('job', ['job' => $job]);
+    // dd($celery);
+
+    return view('celery', ['celery' => $celery]);
 });
 
 Route::get('/contact', function () {
