@@ -7,6 +7,6 @@
   
     <h2 class="font-bold text-lg">{{ $celery['title'] }}</h2>
     <p>
-        Opinion on celery is: {{ $celery['opinion'] }}
+        Opinion on celery is: {{ $celery['celery'] }}
     </p>
 </x-layout>

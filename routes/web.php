@@ -4,11 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Celery;
 
 Route::get('/', function () {
-    $celeries = Celery::all();
-
-    dd($celeries);
-
-    //return view('home');
+    return view('home');
 });
 
 Route::get('/celeries', function () {

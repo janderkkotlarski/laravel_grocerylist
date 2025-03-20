@@ -9,7 +9,7 @@
         @foreach ($celeries as $celery)
             <li>
                 <a href="/celeries/{{ $celery['id'] }}" class="text-blue-500 hover:underline">
-                    <strong>{{ $celery['title'] }}</strong>'s celery opinions: {{ $celery['opinion'] }}
+                    <strong>{{ $celery['title'] }}</strong>'s celery opinions: {{ $celery['celery'] }}
                 </a>
             </li>
         @endforeach
