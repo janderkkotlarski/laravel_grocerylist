@@ -26,6 +26,13 @@ class Celery {
 	}
 
 	public static function find(int $id): array {
-		return Arr::first(static::all(), fn($celery) => $celery['id'] == $id);
+		$celery = Arr::first(static::all(), fn($celery) => $celery['id'] == $id);
+
+		if (!$celery) {
+			abort(404);
+		}
+
+		return $celery;
+
 	}
 }
