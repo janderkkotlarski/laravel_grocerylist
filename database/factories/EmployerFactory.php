@@ -2,13 +2,12 @@
 
 namespace Database\Factories;
 
-use App\Models\Employer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Celery>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employer>
  */
-class CeleryFactory extends Factory
+class EmployerFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,9 +17,7 @@ class CeleryFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->jobTitle(),
-            'employer_id' => Employer::factory(),
-            'celery' => 'Cooking and eating'
+            'name' => fake()->company()
         ];
     }
 }

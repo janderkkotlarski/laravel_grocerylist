@@ -10,5 +10,9 @@ class Celery extends Model {
 
 	protected $table = 'celery_listings';
 
-	protected $fillable = ['title', 'celery'];	
+	protected $fillable = ['title', 'celery'];
+
+	public function employer() {
+		return $this->belongsTo(Employer::class);
+	}
 }
