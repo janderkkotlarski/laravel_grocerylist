@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('jags', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
         });
 
-        Schema::create('celery_tag', function (Blueprint $table) {
+        Schema::create('celery_jag', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFOr(\App\Models\Celery::class, 'celery_listing_id')->constrained()->cascadeOnDelete();
-            $table->foreignIdFOr(\App\Models\Tag::class)->constrained()->cascadeOnDelete();
+            $table->foreignIdFOr(\App\Models\Jag::class)->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -30,7 +30,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tags');
-        Schema::dropIfExists('celery_tag');
+        Schema::dropIfExists('jags');
+        Schema::dropIfExists('celery_jag');
     }
 };

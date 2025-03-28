@@ -15,4 +15,12 @@ class Celery extends Model {
 	public function employer() {
 		return $this->belongsTo(Employer::class);
 	}
+
+	public function tags() {
+		return $this->belongsToMany(Tag::class, foreignPivotKey: "celery_listing_id");
+	}
+
+	public function jags() {
+		return $this->belongsToMany(Jag::class, foreignPivotKey: "celery_listing_id");
+	}
 }
