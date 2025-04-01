@@ -16,5 +16,9 @@
                 </div>
             </a>
         @endforeach
+
+        <div>
+            {{ $celeries->links() }}
+        </div>
     </div>
 </x-layout>
