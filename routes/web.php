@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::get('/celeries', function () {
     // The following is eager loading:
-    $celeries = Celery::with('employer')->simplePaginate(3);
+    $celeries = Celery::with('employer')->cursorPaginate(3);
     // The following leads to lazy loading in the celeries balde page:
     // $celeries = Celery::all();
 

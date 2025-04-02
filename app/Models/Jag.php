@@ -14,4 +14,3 @@ class Jag extends Model
         return $this->belongsToMany(Celery::class, relatedPivotKey: "celery_listing_id");
     }
 }
-}
