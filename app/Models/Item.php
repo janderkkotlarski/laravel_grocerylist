@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model
 {
-    //
-
-    public function items() { 
-        return $this->hasMany(Item::class);
+    public function items() {
+        return $this->belongsTo(Category::class);
     }
 }
