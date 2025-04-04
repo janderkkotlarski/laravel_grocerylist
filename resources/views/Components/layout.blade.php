@@ -21,7 +21,6 @@
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-              <x-nav-link href="/celeries" :active="request()->is('celeries')">Celeries</x-nav-link>
               <!-- adding : before an attribute makes strings into expressions -->
               <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
             </div>
@@ -73,7 +72,6 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-          <x-nav-link href="/celeries" :active="request()->is('celeries')">Celeries</x-nav-link>
           <!-- adding : before an attribute makes strings into expressions -->
           <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
       </div>
