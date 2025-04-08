@@ -1,10 +1,16 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+
+
+
+echo 'This does work.';
 
 Route::get('/', function () {
     return view('home');
 });
+
 /*
 
 Route::get('/contact', function () {

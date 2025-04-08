@@ -24,7 +24,7 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        /*
+        
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
@@ -41,7 +41,7 @@ return new class extends Migration
             $table->integer('last_activity')->index();
         });
 
-        */
+       
     }
 
     /**
