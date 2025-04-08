@@ -22,9 +22,7 @@ return new class extends Migration
             // $table->boolean('admin');
             $table->rememberToken();
             $table->timestamps();
-        });
-
-        
+        });     
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
