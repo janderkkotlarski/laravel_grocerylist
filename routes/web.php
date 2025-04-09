@@ -3,6 +3,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\GroceryController;
+use App\Http\Controllers\ItemController;
+
 Route::get('/', function () {
     return view('home');
 });
@@ -19,9 +22,11 @@ Route::get('/hello', function () {
     return 'Hello, World!';
 });
 
-Route::get('/items', function () {})->name('items.index');
+Route::get('/groceries', [GroceryController::class, 'index']);
 
-Route::get('/items/create', function () {})->name('items.create');
+Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+
+Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
 
 Route::post('/items', function () {})->name('items.store');
 
