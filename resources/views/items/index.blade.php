@@ -1,3 +1,11 @@
+@extends('layouts.app')
+
+@section('index', 'Index')
+
+@section('content')
+	<p>This is the index page.</p>
+@endsection
+
 <h1>Items</h1>
 
 <table>
@@ -25,12 +33,3 @@
 		@endforeach
 	</tbody>
 </table>
-
-@extends('layouts.app')
-
-@section('index', 'Index')
-
-@section('content')
-	<p>This is the index page.</p>
-@endsection
-

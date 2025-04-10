@@ -31,7 +31,12 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = new Item();
+        $item->name = $request->input('name');
+        $item->description = $request->input('description');
+        $item->save();
+
+        return redirect()->route('items.index');
     }
 
     /**
