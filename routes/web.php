@@ -32,9 +32,9 @@ Route::post('/items', [ItemCOntroller::class, 'store'])->name('items.store');
 
 Route::get('/items/{id}', function () {})->name('items.show');
 
-Route::get('/items/{id}/edit', function () {})->name('items.edit');
+Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');
 
-Route::put('/items/{id}', function () {})->name('items.update');
+Route::put('/items/{item}', [ItemController::class, 'update'])->name('items.update');
 
 Route::delete('/items/{item}', [ItemController::class, 'destroy'])->name('items.destroy');
 
