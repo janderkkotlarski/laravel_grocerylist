@@ -36,6 +36,9 @@ class ItemController extends Controller
         // Validates incoming data
         $validated = $request->validated();
 
+        Item::create($validated);
+
+        /*
         $item = new Item();
 
         // Get the validated aname and description
@@ -43,6 +46,7 @@ class ItemController extends Controller
         $item->description = $validated['description'];
 
         $item->save();
+        */
 
         return redirect()->route('items.index');
     }
@@ -72,11 +76,15 @@ class ItemController extends Controller
         // Validates incoming data
         $validated = $request->validated();
 
+        $item->update($validated);
+
+        /*
         // Get the validated aname and description
         $item->name = $validated['name'];
         $item->description = $validated['description'];
 
         $item->save();
+        */
 
         return redirect()->route('items.index');
     }
