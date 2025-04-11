@@ -21,7 +21,7 @@ class ItemFactory extends Factory
         return [
             'name' => $this->faker->word,
             'description' => $this->faker->sentence,
-            'category_id' => Category::inRandomOrder()->first->id,
+            'category_id' => Category::inRandomOrder()->first()->id,
         ];
     }
 }

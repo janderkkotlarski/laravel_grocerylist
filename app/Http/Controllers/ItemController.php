@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateItemRequest;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use App\Models\Category;
 
 class ItemController extends Controller
 {
@@ -25,7 +26,8 @@ class ItemController extends Controller
      */
     public function create()
     {
-        return view('items.create');
+        $categories = Category::all();
+        return view('items.create', compact('categories'));
     }
 
     /**
@@ -62,10 +64,10 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
-        $item = Item::find($id);
-        return view('items.edit', compact('item'));
+        $categories = Category::all();       
+        return view('items.edit', compact('item', 'categories'));
     }
 
     /**
