@@ -32,7 +32,7 @@ Route::post('/items', [ItemCOntroller::class, 'store'])->name('items.store');
 
 Route::get('/items/{id}', function () {})->name('items.show');
 
-Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit');
+Route::get('/items/{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
 
 Route::put('/items/{item}', [ItemController::class, 'update'])->name('items.update');
 
