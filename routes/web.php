@@ -5,10 +5,6 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ItemController;
 
-Route::get('/home', function () {
-    return view('home');
-});
-
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 
 Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
