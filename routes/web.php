@@ -3,26 +3,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\GroceryController;
 use App\Http\Controllers\ItemController;
 
-Route::get('/', function () {
+Route::get('/home', function () {
     return view('home');
 });
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/welcome', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function () {
-    return 'Hello, World!';
-});
-
-Route::get('/groceries', [GroceryController::class, 'index']);
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 

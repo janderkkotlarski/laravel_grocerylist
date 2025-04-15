@@ -20,10 +20,9 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-              <x-nav-link href="/welcome" :active="request()->is('welcome')">Welcome</x-nav-link>
-              <!-- adding : before an attribute makes strings into expressions -->
-              <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+              <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
+
+              <x-nav-link href="/items" :active="request()->is('items')">Items</x-nav-link>
             </div>
           </div>
         </div>
@@ -70,13 +69,8 @@
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <div class="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-          <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-
-          <x-nav-link href="/welcome" :active="request()->is('welcome')">Welcome</x-nav-link>
-          <!-- adding : before an attribute makes strings into expressions -->
-          <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+          <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
+          <x-nav-link href="/items" :active="request()->is('items')">Items</x-nav-link>
       </div>
       <div class="border-t border-gray-700 pt-4 pb-3">
         <div class="flex items-center px-5">
